@@ -1,6 +1,8 @@
 /* 웹페이지 기본이 될 css 입니다 경로 잘 설정해주세요 */
 
-* {
+*,
+::after,
+::before {
     box-sizing: border-box;
 }
 
@@ -27,13 +29,6 @@
     --danger: #dc3545;
     --light: #f8f9fa;
     --dark: #343a40;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 body {
@@ -52,7 +47,7 @@ body {
 
 ul {
     display: block;
-    list-style-type: disc;
+    list-style-type: none;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -63,4 +58,32 @@ ul {
 li {
     display: list-item;
     text-align: -webkit-match-parent;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+a,
+a:hover {
+    color: currentColor;
+    text-decoration: none;
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
 }
